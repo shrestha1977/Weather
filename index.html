@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Custom Weather Forecast</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+  <div class="spinner" id="spinner"></div>
+
+  <header>
+    <h1>🌤️ Custom Weather Forecast</h1>
+    <p>Powered by Open‑Meteo & OpenStreetMap</p>
+  </header>
+
+  <form id="location-form">
+    <input type="text" id="locationQuery" placeholder="Enter any location" required />
+    <button type="submit">Search</button>
+  </form>
+
+  <div class="weather-data" id="weather-data">
+    <p>Enter a location to see the weather 🌍</p>
+  </div>
+
+  <div class="center">
+    <a id="downloadBtn" href="#" download="weather_data.json">📥 Download Weather Data</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
