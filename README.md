@@ -1,4 +1,4 @@
-# Weather
+# Weather Forcast Site
 
 A fully responsive, animated weather web application that delivers live weather forecasts for any location.
 
