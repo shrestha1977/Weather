@@ -1,0 +1,136 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to top, #cce5ff, #e0f7fa);
+  color: #222;
+  min-height: 100vh;
+  position: relative;
+}
+
+#background-animation {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-size: cover;
+  opacity: 0.2;
+  z-index: -1;
+  animation: floatBg 30s linear infinite;
+}
+
+@keyframes floatBg {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 0; }
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+header {
+  text-align: center;
+  padding-bottom: 1rem;
+  color: #003366;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background: #3399ff;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #007acc;
+}
+
+.switch {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.unit-label {
+  font-size: 14px;
+  color: #333;
+}
+
+.slider {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  background: #ccc;
+  border-radius: 20px;
+  display: inline-block;
+  cursor: pointer;
+}
+.slider:before {
+  content: "";
+  position: absolute;
+  top: 2px; left: 2px;
+  width: 16px; height: 16px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+input[type="checkbox"]:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+#weather-output {
+  margin-top: 2rem;
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+th {
+  background: #e0f0ff;
+}
+
+#search-history {
+  margin-top: 10px;
+  text-align: center;
+}
+#search-history span {
+  background: #e0e0e0;
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin: 5px;
+  display: inline-block;
+  cursor: pointer;
+}
+#search-history span:hover {
+  background: #d0d0d0;
+}
